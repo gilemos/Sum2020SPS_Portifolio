@@ -27,7 +27,7 @@ function scrollFunction() {
         document.getElementById("gifPositionerDiv").style.opacity = 0;
     }
 
-    if (document.body.scrollTop > 900 || document.documentElement.scrollTop > 900) {
+    if (document.body.scrollTop > 1100 || document.documentElement.scrollTop > 1100) {
         document.getElementById("miniBioDiv").style.opacity = 0;
         document.getElementById("gifPositionerDiv").style.opacity = 0;
     } else {

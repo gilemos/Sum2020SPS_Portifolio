@@ -1,9 +1,452 @@
-#content {
-  margin-left: auto;
-  margin-right: auto;
-  width: 650px;
+/* General Use */
+body {
+    margin: 0px;
 }
 
-#greeting-container {
-  margin-top: 20px;
+body, html {
+    height: 100%;
+}
+
+table {
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border-width: 0px;
+}
+
+.borderCell {
+    width:27px;
+    background-color:white;
+    padding-top:40vh;
+}
+
+.longTr {
+    height: 280vh;
+}
+
+.shortTr {
+    height: 100vh;
+}
+
+
+/* First Section: 'Wellcome' */
+#mainHello {
+    /*font-family: 'Bebas Neue', cursive;*/
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+    font-weight: 800;
+    font-size:90px;
+    color: #211023;
+    text-shadow:1px 1px 1px ghostWhite;
+    padding-left:30px;
+    position:fixed;
+    overflow:hidden;
+    top:30vh;
+    margin-bottom: 0px;
+    animation: 1s ease-out 0s 1 smoothIn;
+    transition: 1s;
+}
+
+#movingcell {
+    width:45%;
+    transition: 2s;
+    background-image: linear-gradient(#FF3B3F, #FF3B3F, #E23076);
+}
+
+#socialMediaLinksDiv {
+    overflow:hidden; 
+    position:fixed; 
+    top:40vh; 
+    width:100%;
+    transition: 1.5s;
+}
+
+.socialMediaImages {
+    width:18px;
+    height:18px;
+    margin:0px;
+    padding-left:0px;
+    padding-right:0px;
+    padding-bottom:10px;
+}
+
+/* Second Section: Mini bio */
+#miniBioDiv {
+    position:fixed;
+    height:100%;
+    width:50%;
+    overflow:hidden;
+    top:25vh;
+    opacity: 0;
+    transition:1s;
+}
+
+#miniBioHeader {
+    color:black;
+    font-family: 'Bebas Neue', cursive;
+    text-align:justify;
+    font-size:50px; 
+    font-weight:400;
+    margin-bottom: 5px;
+    width: 480px;
+}
+
+#bioWavyLine {
+    width:20%; 
+    height:10px; 
+    margin:0px;
+    padding-bottom:30px;
+}
+
+#miniBioText {
+    color:black;
+    font-family: 'Source Code Pro', monospace;
+    text-align:justify;
+    font-size:15px;
+    font-weight:400;
+    line-height: 150%;
+    width: 480px;
+}
+
+#gifDescriptDiv {
+    background-color:ghostwhite;
+    padding:5px;
+    height:30%;
+    width:100%;
+}
+
+#gifDiv {
+    height:80%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
+    border-style: solid;
+    border-width: 10px;
+    border-color:ghostwhite;
+    text-align: center;
+}
+
+#gifDiv:hover {
+    -ms-transform: rotate(7deg); /* IE 9 */
+    -webkit-transform: rotate(7deg); /* Safari */
+    transform: rotate(7deg);
+}
+
+#gifPositionerDiv {
+    position:fixed;
+    opacity: 0;
+    transition: 1s;
+    height:100%;
+    align-self: right;
+    overflow:hidden;
+    top:20vh;
+}
+
+#galleryPolaroid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 5.5vw);
+    grid-gap: 1rem; 
+    padding-right:28px;
+}
+
+.galleryItemPolaroid {
+    mix-blend-mode: screen;
+    margin:0px;
+}
+
+.galleryItemPolaroid--1 {
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+
+.galleryItemPolaroid--2 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 6;
+}
+
+#waveGif {
+    height:55%;
+    padding:10px;
+}
+
+#parallaxDiv { 
+    background-image: linear-gradient(#E23076,#E23076, #AA4695);
+    height:100vh;
+    transition: 1s;
+    margin-right: 29px;
+    margin-left:29px;
+}
+
+/* Third Section: Projects */
+#projectHeader {
+    font-family: 'Bebas Neue', cursive;
+    text-align:justify;
+    font-size:130px; 
+    font-weight:400;
+    margin: 5px;
+    padding-left:50px;
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity:0;
+    transition:2.0s;
+}
+
+#projectDescription {
+    font-family: 'Source Code Pro', monospace;
+    font-weight:400;
+    font-size:12px; 
+    padding-right:30px;
+    padding-top: 60px;
+    background: -webkit-linear-gradient(#E23076, #AA4695);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    vertical-align: top;
+    opacity:0;
+    transition:2.2s;
+}
+
+.projectMiniDescriptionHeader {
+    color:white;
+    font-family: 'Bebas Neue', cursive;
+    text-align: center;
+    font-size: 2vw;
+    font-weight:400;
+    margin:0px;
+    padding-right:30px;
+    padding-left:30px;
+    padding-top:30px;
+}
+
+.projectMiniDescript {
+    color:white;
+    font-family: 'Source Code Pro', monospace;
+    text-align: center;
+    font-size: 0.8vw;
+    font-weight:400;
+    padding-right:7px;
+    padding-left:7px;
+    opacity: 0.8;
+}
+
+#projectMenu {
+    list-style-type: none;
+    padding-left: 10px;
+}
+
+#projectMenu li {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1.2vw;
+    font-weight:400;
+    color:gray;
+    padding:5px;
+}
+
+#projectMenu li:hover{
+    background: -webkit-linear-gradient(#E23076, #AA4695);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.5vw;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(7, 5.3vw);
+    grid-gap: 1.4rem; 
+}
+
+#galleryContainer {
+    width: 95%;
+    margin: 2rem auto; 
+    opacity:0;
+    transition:2.4s;
+}
+
+.galleryTextDiv {
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+}
+
+.galleryAR {
+    display: none;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 1s; 
+}
+
+.galleryWeb {
+    display: none;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 1s; 
+}
+
+.galleryApp {
+    display: block;
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration: 1s; 
+
+}
+
+.galleryML {
+    display: none;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 1s; 
+}
+
+.galleryLlama {
+    background: url("../Images/llama_white.png");
+    background-size: cover;
+}
+
+.galleryPear {
+    background: url("../Images/pear.png");
+    background-size: cover;
+}
+
+.galleryJelly {
+    background: url("../Images/jellyfish_white.png");
+    background-size: cover;
+}
+
+.galleryFox {
+    background: url("../Images/fox_white.png");
+    background-size: cover;
+}
+
+.galleryFudge {
+    background: url("../Images/fudge.png");
+    background-size: cover;
+}
+
+.galleryAmazoon {
+    background: url("../Images/amazoon.png");
+    background-size: cover;
+}
+
+.galleryBmore {
+    background: url("../Images/bmore.png");
+    background-size: cover;
+}
+
+.galleryPortifolio {
+    background: url("../Images/portifolio.png");
+    background-size: cover;
+}
+
+.galleryTextDiv:hover {
+    background-image: linear-gradient(#FF3B3F, #FF3B3F, #E23076);
+    box-shadow: 1px 5px 18px rgb(202, 108, 147);
+    opacity:0.8;
+}
+
+.galleryTextSpan {
+    display:none;
+}
+
+.galleryTextDiv:hover .galleryTextSpan {
+    display:block
+}
+
+
+.galleryItem {
+    background-color:lightgrey;
+    border: 1px transparent solid;
+    mix-blend-mode: screen;
+    margin:0px;
+}
+
+.galleryItemWithHover:hover {
+    border: 1px white solid;
+}
+
+.galleryItem--1 {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.galleryItem--2 {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+.galleryItem--3 {
+    grid-column-start: 5;
+    grid-column-end: 8;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.galleryItem--4 {
+    grid-column-start: 8;
+    grid-column-end: 11;
+    grid-row-start: 3;
+    grid-row-end: 5;
+}
+
+.galleryItem--5 {
+    grid-column-start: 7;
+    grid-column-end: 10;
+    grid-row-start: 4;
+    grid-row-end: 6;
+}
+
+.galleryItem--6 {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 5;
+}
+
+.galleryItem--7 {
+    grid-column-start: 4;
+    grid-column-end: 7;
+    grid-row-start: 3;
+    grid-row-end: 5;
+}
+
+.galleryItem--8 {
+    grid-column-start: 5;
+    grid-column-end: 8;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+/* End section */
+#endDiv {
+    background-image: linear-gradient(#38527D, #2F4858);
+    height:100px;
+}
+
+.smallText {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 10px;
+    font-weight:400;
+    color:white;
+}
+
+
+
+/* Animations stuff */
+@keyframes smoothIn {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
 }

@@ -1,18 +1,183 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <title>My Portfolio</title>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Esteban&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400&display=swap" rel="stylesheet">
+    <title>Giovanna's Portifolio</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js">
+    </script>
   </head>
   <body>
-    <div id="content">
-      <h1>My Portfolio</h1>
-      <p>This is my portfolio.</p>
-      <p>Click here to get a random message:</p>
-      <button onclick="addRandomGreeting()">Hello</button>
-      <div id="greeting-container"></div>
-    </div>
+    <div style="overflow:hidden; position:fixed; top:0; width:100%; height:27px; background-color:white;"> </div>
+
+    <table style="width:100vw; margin=0px;">
+        <tr class="longTr">
+            <td class="borderCell"></td>
+            <td valign = "bottom" id="movingcell">
+                <table style="width:100%; height:140vh;">
+                    <tr>
+                        <td style="height:100%; padding-top:70px;" align="center" valign="top">
+                            <div id="miniBioDiv">
+                                <p id="miniBioHeader">I'm Giovanna</p>
+                                <img id="bioWavyLine" src="../Images/wavyline.png">
+                                <p id="miniBioText"> 
+                                I am a computer science student at the Johns Hopkins University. I am passionate 
+                                about data analysis, design, and projects that promote social change. I am a Hackathon
+                                geek, a begginer in virtual reality research and an animation enthusiast.<br>
+                                Welcome to my portifolio!</p>
+                            </div>
+                        </td>
+                        <td style="height:100%; padding-top:70px; width:55%" align="center" valign="top">
+                            <div id="gifPositionerDiv">
+                                <div id="galleryPolaroid">
+                                    <figure class="galleryItemPolaroid galleryItemPolaroid--1">
+                                        <div id="gifDiv">
+                                            <img id="waveGif" src="../Images/wave.gif" valign="center">
+                                            <div id="gifDescriptDiv" valign="bottom">
+                                                <p style="font-family: 'Esteban', serif;"><i>Hey, there!</i></p>
+                                            </div>
+                                        </div>
+                                    </figure>
+                                    <figure class="galleryItemPolaroid galleryItemPolaroid--2">
+                                        <div id="gifDiv">
+                                            <img id="waveGif" src="../Images/headphone2.gif" valign="center">
+                                            <div id="gifDescriptDiv" valign="bottom">
+                                                <p style="font-family: 'Esteban', serif;"><i>Songs commin' soon!</i></p>
+                                            </div>
+                                        </div>
+                                    </figure>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td valign = "top" style="background-color:ghostwhite;" id="shrinkingCell">
+                <h2 id="mainHello">WELL<br>COME</h2>
+            </td>
+            <td valign = "top" class="borderCell">
+                <div id="socialMediaLinksDiv">
+                <a href="https://www.facebook.com/GiLemos42"><img src="../Images/facebook.png" class="socialMediaImages"></a><br>
+                <a href="https://www.linkedin.com/in/giovanna-lemos-ribeiro/"><img src="../Images/linkedin.png" class="socialMediaImages"></a><br>
+                <a href="https://github.com/gilemos"><img src="../Images/github.png" class="socialMediaImages"></a><br>
+                </div>
+            </td>
+        </tr>
+    </table>
+    
+    <div id="parallaxDiv"></div>
+   
+   <div style="height:50px;"></div>
+    <table style="width:100vw;">
+        <tr class="shortTr">
+            <td class="borderCell"></td>
+            <td valign="center" align="center" style="width:15%">
+                <p id="projectHeader">PR<br>OJ<br>EC<br>TS</p>
+            </td>
+            <td valign="top" style="width:18%">
+                <div style="position:relative; height:100vh;">
+                    <p id="projectDescription"> <i>Check out some of my past projects. Hover over the squares to
+                        get more details and click it to go to the github repo</i></p>
+                    <div style="position:absolute; bottom:20vh;">
+                        <ul id="projectMenu">
+                            <li onclick="selectFigure('.galleryApp')">APPS</li>
+                            <li onclick="selectFigure('.galleryWeb')">WEB APPLICATIONS</li>
+                            <li onclick="selectFigure('.galleryAR')">AUGMENTED REALITY</li>
+                            <li onclick="selectFigure('.galleryML')">ML/ALGO</li>
+                        </ul>
+                    </div>
+                <div>
+            </td>
+            <td valign="center" align="center">
+                <div id="galleryContainer">
+                    <div class="gallery">
+                        <figure class="galleryItem galleryItemWithHover galleryItem--1 galleryAR">
+                            <a href="https://github.com/gilemos/Jellyfish" style="text-decoration: none;">
+                                <div valign="center" class="galleryTextDiv galleryJelly">
+                                    <span class="galleryTextSpan">
+                                        <p class="projectMiniDescriptionHeader"> Jellyfish </p>
+                                        <p class="projectMiniDescript"> AR application to learn chemistry. </p>
+                                    </span>
+                                </div>
+                            </a>
+                        </figure>
+                        <figure class="galleryItem galleryItemWithHover galleryItem--2 galleryApp">
+                            <a href="https://github.com/pear-pearlhacks/pear" style="text-decoration: none;">
+                                <div valign="center" class="galleryTextDiv galleryPear">
+                                    <span class="galleryTextSpan">
+                                        <p class="projectMiniDescriptionHeader "> pear. </p>
+                                        <p class="projectMiniDescript"> Android/iOS app to prevent sexual violence. </p>
+                                    </span>
+                                </div>
+                            </a>
+                        </figure>
+                        <figure class="galleryItem galleryItemWithHover galleryItem--3 galleryApp">
+                            <a href="https://github.com/fbu-2019/Travel-Scheduler" style="text-decoration: none;">
+                                <div valign="center" class="galleryTextDiv galleryLlama">
+                                    <span class="galleryTextSpan">
+                                        <p class="projectMiniDescriptionHeader"> Travellama </p>
+                                        <p class="projectMiniDescript"> Travel scheduler iOS application. </p>
+                                    </span>
+                                </div>
+                            </a>
+                        </figure>
+                        <figure class="galleryItem galleryItemWithHover galleryItem--4 galleryApp">
+                            <a href="https://devpost.com/software/healthfox" style="text-decoration: none;">
+                                <div valign="center" class="galleryTextDiv galleryFox">
+                                    <span class="galleryTextSpan">
+                                        <p class="projectMiniDescriptionHeader"> FoxHealth </p>
+                                        <p class="projectMiniDescript"> iOS application to connect patients with doctors and reliable health information. </p>
+                                    </span>
+                                </div>
+                            </a>
+                        </figure>
+                        <figure class="galleryItem galleryItemWithHover galleryItem--5 galleryML">
+                            <div valign="center" class="galleryTextDiv galleryBmore">
+                                <span class="galleryTextSpan">
+                                    <p class="projectMiniDescriptionHeader"> BMoreSafe </p>
+                                    <p class="projectMiniDescript"> Safe navigation application for the city of Baltimore. </p>
+                                </span>
+                            </div>
+                        </figure>
+                        <figure class="galleryItem galleryItemWithHover galleryItem--7 galleryML">
+                            <a href="https://2018.spaceappschallenge.org/challenges/can-you-build/bring-your-own-solution/teams/amazoon/project" style="text-decoration: none;">
+                                <div valign="center" class="galleryTextDiv galleryAmazoon">
+                                    <span class="galleryTextSpan">
+                                        <p class="projectMiniDescriptionHeader"> Amazoon </p>
+                                        <p class="projectMiniDescript"> Modeling the relation between socio-political measures and deforestation with machine learning. </p>
+                                    </span>
+                                </div>
+                            </a>
+                        </figure>
+                        <figure class="galleryItem galleryItemWithHover galleryItem--6 galleryWeb">
+                            <a href="https://github.com/gilemos/FudgeRatio" style="text-decoration: none;">
+                                <div valign="center" class="galleryTextDiv galleryFudge">
+                                    <span class="galleryTextSpan">
+                                        <p class="projectMiniDescriptionHeader"> Fudge Ratio </p>
+                                        <p class="projectMiniDescript"> Google SPS project that calculates the fudge ratio of activities. </p>
+                                    </span>
+                                </div>
+                            </a>
+                        </figure>
+                        <figure class="galleryItem galleryItemWithHover galleryItem--8 galleryWeb">
+                            <a href="https://github.com/gilemos/Sum2020SPS_Portifolio" style="text-decoration:none;">
+                                <div valign="center" class="galleryTextDiv galleryPortifolio">
+                                    <span class="galleryTextSpan">
+                                        <p class="projectMiniDescriptionHeader"> Portifolio </p>
+                                        <p class="projectMiniDescript"> This website! </p>
+                                    </span>
+                                </div>
+                            </a>
+                        </figure>
+                    </div>
+                </div>
+            </td>
+            <td class="borderCell"></td>
+        </tr>
+    </table>
   </body>
 </html>

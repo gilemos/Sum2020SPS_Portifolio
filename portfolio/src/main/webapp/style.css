@@ -22,11 +22,11 @@ table, th, td {
     padding-top:40vh;
 }
 
-.doubleTr {
+.longTr {
     height: 280vh;
 }
 
-.fullTr {
+.shortTr {
     height: 100vh;
 }
 

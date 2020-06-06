@@ -63,6 +63,15 @@ table, th, td {
     transition: 1.5s;
 }
 
+.socialMediaImages {
+    width:18px;
+    height:18px;
+    margin:0px;
+    padding-left:0px;
+    padding-right:0px;
+    padding-bottom:10px;
+}
+
 /* Second Section: Mini bio */
 #miniBioDiv {
     position:fixed;
@@ -415,6 +424,19 @@ table, th, td {
     grid-column-end: 8;
     grid-row-start: 2;
     grid-row-end: 4;
+}
+
+/* End section */
+#endDiv {
+    background-image: linear-gradient(#38527D, #2F4858);
+    height:100px;
+}
+
+.smallText {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 10px;
+    font-weight:400;
+    color:white;
 }
 
 

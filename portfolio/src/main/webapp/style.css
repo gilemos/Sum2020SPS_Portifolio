@@ -427,16 +427,45 @@ table, th, td {
 }
 
 /* End section */
-#endDiv {
-    background-image: linear-gradient(#38527D, #2F4858);
-    height:100px;
+#blogDiv {
+    background-image: linear-gradient(#6A5396,#6A5396, #38527D);
+    height:100vh;
+    margin-right: 0%;
+    margin-left: 0%;
+    border-radius: 0px;
 }
 
-.smallText {
-    font-family: 'Source Code Pro', monospace;
-    font-size: 10px;
-    font-weight:400;
+.blogHeader {
     color:white;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 3.5vw;
+    font-weight:400;
+    margin:0px;
+    padding-left:70px;
+    padding-top:70px;
+    padding-bottom: 50px;
+}
+
+.blogText {
+    color:white;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1vw;
+    font-weight:400;
+    text-align: justify;
+    margin:0px;
+    padding-left:70px;
+}
+
+.blogMarks {
+    color:white;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 10vw;
+    font-weight:400;
+    text-align: right;
+    line-height: 50%;
+    margin:0px;
+    padding-top:5%;
+    padding-right:5%;
 }
 
 

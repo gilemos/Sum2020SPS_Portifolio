@@ -33,8 +33,9 @@ public class DataServlet extends HttpServlet {
 
         List<Comment> comments = new ArrayList<>();
         for (Entity entity : results.asIterable()) {
-            String message = (String) entity.getProperty("comment");
-            Comment newComment = new Comment(message);
+            String comment = (String) entity.getProperty("comment");
+            String name = (String) entity.getProperty("name");
+            Comment newComment = new Comment(name, message);
             comments.add(newComment);
         }
 
@@ -45,12 +46,12 @@ public class DataServlet extends HttpServlet {
 
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        String upperCaseName = request.getParameter("name").toUpperCase();
+        String name = request.getParameter("name");
         String comment = request.getParameter("comment");
-        String finalComment = upperCaseName + "\n\n" + comment;
 
         Entity taskEntity = new Entity("Task");
-        taskEntity.setProperty("comment", finalComment);
+        taskEntity.setProperty("comment", comment);
+        taskEntity.setProperty("name", name)
         this.datastore.put(taskEntity);
         response.sendRedirect("/blog.html");
 

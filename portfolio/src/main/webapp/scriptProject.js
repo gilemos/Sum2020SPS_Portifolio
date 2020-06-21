@@ -11,7 +11,7 @@ function createListElement(comment) {
 
     const divElement = document.createElement('div');
     divElement.setAttribute("id", "commentDiv");
-    divElement.innerText = comment.message + " ";
+    divElement.innerText = comment.name + "/n" + comment.message;
 
     return divElement;
 }

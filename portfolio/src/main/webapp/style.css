@@ -33,11 +33,10 @@ table, th, td {
 
 /* First Section: 'Wellcome' */
 #mainHello {
-    /*font-family: 'Bebas Neue', cursive;*/
     font-family: 'Montserrat', sans-serif;
     text-align: left;
     font-weight: 800;
-    font-size:90px;
+    font-size:7vw;
     color: #211023;
     text-shadow:1px 1px 1px ghostWhite;
     padding-left:30px;
@@ -48,6 +47,17 @@ table, th, td {
     animation: 1s ease-out 0s 1 smoothIn;
     transition: 1s;
 }
+
+#blinkingHoverWarning {
+     color: #FF3B3F;
+     text-align: left;
+     font-family: 'Montserrat', sans-serif;
+     font-weight: 300;
+     opacity:0;
+     animation: blinkingText 2.5s 5;
+     padding-left:1vw;
+     font-size:1vw;
+ }
 
 #movingcell {
     width:45%;
@@ -76,26 +86,26 @@ table, th, td {
 #miniBioDiv {
     position:fixed;
     height:100%;
-    width:50%;
+    width:40%;
     overflow:hidden;
     top:25vh;
     opacity: 0;
     transition:1s;
+    padding-left: 3vw;
+    padding-right:3vw;
 }
 
 #miniBioHeader {
     color:black;
     font-family: 'Bebas Neue', cursive;
     text-align:justify;
-    font-size:50px; 
+    font-size:5vw; 
     font-weight:400;
     margin-bottom: 5px;
-    width: 480px;
 }
 
 #bioWavyLine {
     width:20%; 
-    height:10px; 
     margin:0px;
     padding-bottom:30px;
 }
@@ -104,21 +114,20 @@ table, th, td {
     color:black;
     font-family: 'Source Code Pro', monospace;
     text-align:justify;
-    font-size:15px;
+    font-size:1vw;
     font-weight:400;
     line-height: 150%;
-    width: 480px;
 }
 
 #gifDescriptDiv {
     background-color:ghostwhite;
-    padding:5px;
-    height:30%;
-    width:100%;
+    padding:0.5vw;
+    vertical-align:baseline;
 }
 
 #gifDiv {
-    height:80%;
+    height:12vw;
+    width:12vw;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background-color: white;
     border-style: solid;
@@ -143,6 +152,10 @@ table, th, td {
     top:20vh;
 }
 
+.gifSubs {
+    font-family: 'Esteban', serif;
+    font-size: 1.1vw;
+}
 #galleryPolaroid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -172,7 +185,7 @@ table, th, td {
 
 #waveGif {
     height:55%;
-    padding:10px;
+    padding-top:0.7vw;
 }
 
 #parallaxDiv { 
@@ -187,10 +200,10 @@ table, th, td {
 #projectHeader {
     font-family: 'Bebas Neue', cursive;
     text-align:justify;
-    font-size:130px; 
+    font-size:10vw; 
     font-weight:400;
     margin: 5px;
-    padding-left:50px;
+    padding-left:1vw;
     background: -webkit-linear-gradient(#eee, #333);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -201,9 +214,9 @@ table, th, td {
 #projectDescription {
     font-family: 'Source Code Pro', monospace;
     font-weight:400;
-    font-size:12px; 
-    padding-right:30px;
-    padding-top: 60px;
+    font-size:1vw; 
+    padding-right:0.7vw;
+    padding-top: 10vh;
     background: -webkit-linear-gradient(#E23076, #AA4695);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -219,9 +232,7 @@ table, th, td {
     font-size: 2vw;
     font-weight:400;
     margin:0px;
-    padding-right:30px;
-    padding-left:30px;
-    padding-top:30px;
+    padding-top:1.4vw;
 }
 
 .projectMiniDescript {
@@ -230,8 +241,8 @@ table, th, td {
     text-align: center;
     font-size: 0.8vw;
     font-weight:400;
-    padding-right:7px;
-    padding-left:7px;
+    padding-right:0.82vw;
+    padding-left:0.82vw;
     opacity: 0.8;
 }
 
@@ -307,41 +318,49 @@ table, th, td {
 .galleryLlama {
     background: url("../Images/llama_white.png");
     background-size: cover;
+    background-position: center;
 }
 
 .galleryPear {
     background: url("../Images/pear.png");
     background-size: cover;
+    background-position: center;
 }
 
 .galleryJelly {
     background: url("../Images/jellyfish_white.png");
     background-size: cover;
+    background-position: center;
 }
 
 .galleryFox {
     background: url("../Images/fox_white.png");
     background-size: cover;
+    background-position: center;
 }
 
 .galleryFudge {
     background: url("../Images/fudge.png");
     background-size: cover;
+    background-position: center;
 }
 
 .galleryAmazoon {
     background: url("../Images/amazoon.png");
     background-size: cover;
+    background-position: center;
 }
 
 .galleryBmore {
     background: url("../Images/bmore.png");
     background-size: cover;
+    background-position: center;
 }
 
 .galleryPortifolio {
     background: url("../Images/portifolio.png");
     background-size: cover;
+    background-position: center;
 }
 
 .galleryTextDiv:hover {
@@ -450,3 +469,18 @@ table, th, td {
         opacity:1;
     }
 }
+
+@keyframes blinkingText {
+     0% {
+         opacity:0;
+     }
+     45% {
+         opacity:1;
+     }
+     55% {
+         opacity:1;
+     }
+     100% {
+         opacity:0;
+     }
+ }

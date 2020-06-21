@@ -11,6 +11,18 @@ function createListElement(comment) {
 
     const divElement = document.createElement('div');
     divElement.setAttribute("id", "commentDiv");
+
+    var score = comment.sentimentScore;
+    if(score <= -0.5) {
+        divElement.setAttribute("style", "background-color: rgba(255, 59, 63, 0.3);");
+    } else if (score <= 0) {
+        divElement.setAttribute("style", "background-color: rgba(255, 59, 63, 0.5);");
+    } else if (score <= 0.5) {
+        divElement.setAttribute("style", "background-color: rgba(255, 59, 63, 0.7);");
+    } else {
+        divElement.setAttribute("style", "background-color: rgba(255, 59, 63, 0.9);");
+    }
+    
     divElement.innerText = comment.name + "/n" + comment.message;
 
     return divElement;

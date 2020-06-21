@@ -47,7 +47,7 @@ public class DataServlet extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String upperCaseName = request.getParameter("name").toUpperCase();
         String comment = request.getParameter("comment");
-        String finalComment = upperCaseName + "\n" + "\n" + comment;
+        String finalComment = upperCaseName + "\n\n" + comment;
 
         Entity taskEntity = new Entity("Task");
         taskEntity.setProperty("comment", finalComment);

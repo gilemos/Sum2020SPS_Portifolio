@@ -16,6 +16,20 @@ table, th, td {
     padding:7px;
 }
 
+#topImage {
+    width:20px; 
+    height:20px; 
+    margin-left:40px; 
+    margin-top:40px
+}
+
+#logoDiv {
+    width:120px; 
+    height:120px; 
+    border-radius:50px; 
+    box-shadow: 5px 5px 4px grey; 
+    overflow: hidden;
+}
 #profileImage {
     object-fit:cover;
     margin:5px;
